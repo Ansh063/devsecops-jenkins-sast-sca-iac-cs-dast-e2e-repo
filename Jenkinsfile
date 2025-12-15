@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven 'Maven_3_8_7'
+    maven 'Maven_3_9_11'
   }
 
   stages {
@@ -26,7 +26,7 @@ pipeline {
         withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
           script {
             try {
-              bat("C:\\snyk\\snyk-win.exe  container test asecurityguru/testeb")
+              bat("C:\\Users\\goyal\\Downloads\\snyk-win.exe  container test asecurityguru/testeb")
             } catch (err) {
               echo err.getMessage()
             }
@@ -43,7 +43,7 @@ pipeline {
     }
     stage('RunDASTUsingZAP') {
       steps {
-        bat("C:\\zap\\ZAP_2.12.0_Crossplatform\\ZAP_2.12.0\\zap.sh -port 9393 -cmd -quickurl https://www.example.com -quickprogress -quickout C:\\zap\\ZAP_2.12.0_Crossplatform\\ZAP_2.12.0\\Output.html")
+        bat("C:\\Program Files\\ZAP\\Zed Attack Proxy\\zap.bat -port 9393 -cmd -quickurl https://www.example.com -quickprogress -quickout C:\\Users\\goyal\\Desktop\\Output.html")
       }
     }
 
