@@ -50,8 +50,7 @@ pipeline {
 
     stage('checkov') {
       steps {
-        bat("pip3 install checkov")
-        bat("checkov -s -f main.tf")
+        bat("c:\Users\goyal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\checkov -s -f main.tf")
       }
     }
 
