@@ -50,7 +50,7 @@ pipeline {
 
     stage('checkov') {
       steps {
-        bat("piip install checkov")
+        bat("pip install checkov")
         bat("checkov -s -f main.tf")
       }
     }
