@@ -50,7 +50,7 @@ pipeline {
 
     stage('checkov') {
       steps {
-        bat("checkov -s -f main.tf")
+        bat("C:\\Users\\goyal\\Desktop\\DevSecOps\\checkov.exe -s -f main.tf")
       }
     }
 
