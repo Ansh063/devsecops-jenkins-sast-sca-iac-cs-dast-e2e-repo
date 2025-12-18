@@ -44,7 +44,7 @@ pipeline {
     }
     stage('RunDASTUsingZAP') {
       steps {
-        bat('"C:\\Program Files\\ZAP\\Zed Attack Proxy\\zap.bat" -port 9393 -cmd -quickurl https://www.example.com -quickprogress -quickout C:\\Users\\goyal\\Desktop\\Output.html')
+        bat("C:\\Users\\goyal\\Desktop\\DevSecOps\\ZAP\\ZedAttackProxy\\zap.bat -port 9393 -cmd -quickurl https://www.example.com -quickprogress -quickout C:\\Users\\goyal\\Desktop\\Output.html")
       }
     }
 
